@@ -5,13 +5,13 @@ steps:
 
 # Test
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'test:unit']
+  args: ['run', 'test']
 
 # Build
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 
 # Deploy
-- name: 'gcr.io/learncicd-414514/firebase'
+- name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy']
 
